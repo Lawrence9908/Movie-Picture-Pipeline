@@ -5,16 +5,14 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'starter/frontend/**/*'
 
 jobs:
   Linting:
     runs-on: ubuntu-latest
-    environment: Development Environment
+    environment: Devlopmnet Environment
 
     steps:
-    - name: Check out the Repository
+    - name: Check the Repository
       uses: actions/checkout@v3
 
     - name: Use Node.js 18
@@ -28,14 +26,14 @@ jobs:
       working-directory: starter/frontend
       run: npm ci
 
-    - name: Run Lint
+    - name: Checkout Run Lint
       run: cd starter/frontend && npm run lint
 
   Test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the Repository
+    - name: Check the Repository
       uses: actions/checkout@v3
 
     - name: Use Node.js 18
@@ -44,12 +42,11 @@ jobs:
         node-version: 18
         cache: 'npm'
         cache-dependency-path: starter/frontend/package-lock.json
-
     - name: Install Dependencies
       working-directory: starter/frontend
       run: npm ci
   
-    - name: Run Tests
+    - name: Test
       run: cd starter/frontend && npm run test
       
   Build:
@@ -57,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Check out the Repository
+    - name: Check the Repository
       uses: actions/checkout@v3
     
     - name: Use Node.js 18
@@ -72,3 +69,4 @@ jobs:
         cd starter/frontend
         docker build --build-arg=REACT_APP_MOVIE_API_URL=http://localhost:5000 --tag=mp-frontend:latest .
         docker run --name mp-frontend -p 3000:3000 -d mp-frontend
+
