@@ -10,7 +10,7 @@ COPY package*.json ./
 
 RUN npx update-browserslist-db@latest
 # Install packages
-RUN npm ci
+RUN npm i
 
 # Copy code
 COPY . .
