@@ -8,6 +8,7 @@ WORKDIR /app
 # Copy dependdency files
 COPY package*.json ./
 
+RUN npx update-browserslist-db@latest
 # Install packages
 RUN npm ci
 
