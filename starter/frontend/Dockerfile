@@ -8,6 +8,7 @@ WORKDIR /app
 # Copy dependdency files
 COPY package*.json ./
 
+RUN npx update-browserslist-db@latest
 # Install packages
 RUN npm ci
 
@@ -21,4 +22,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the React app when the container starts
-CMD ["npx", "serve", "-s", "build"]
+CMD ["npm", "run", "serve"]
