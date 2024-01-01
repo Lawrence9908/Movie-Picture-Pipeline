@@ -1,5 +1,5 @@
 # Movie Picture Pipeline
-[![Frontend Continuous Integration](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/frontend-ci.yml)
+[![Frontend Continuous Integration](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/frontend-ci.yml/badge.svg)](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/frontend-ci.yml) [![Backend Continuous Integration](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/backend-ci.yml/badge.svg)](https://github.com/Lawrence9908/Movie-Picture-Pipeline/actions/workflows/backend-ci.yml) <br>
 You've been brought on as the DevOps resource for a development team that manages a web application that is a catalog of Movie Picture movies. They're in dire need of automating their development workflows in hopes of accelerating their release cycle. They'd like to use Github Actions to automate testing, building and deploying their applications to an existing Kubernetes cluster.
 
 The team's project is comprised of 2 application.
